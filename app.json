@@ -2,6 +2,17 @@
   "expo": {
     "name": "myDate",
     "slug": "myDate",
-    "version": "1.0.0"
+    "version": "1.1.0",
+    "plugins": ["expo-router"],
+    "scheme": "myDate",
+    "userInterfaceStyle": "automatic",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "3aba04e2-dc50-4a83-8745-ad934f02a5f5"
+      }
+    }
   }
 }
