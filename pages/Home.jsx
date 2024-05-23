@@ -100,7 +100,10 @@ const HomeScreen = () => {
             </View>
             <View className="gap-4 justify-end pb-20">
               <View className="justify-center items-center">
-                <PressableButton title="Select a " onClick={showDatePicker} />
+                <PressableButton
+                  title="Select a Date"
+                  onClick={showDatePicker}
+                />
               </View>
               <View className="justify-center items-center">
                 <PressableButton title="SEARCH" onClick={search} />
