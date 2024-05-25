@@ -11,8 +11,6 @@ import { Video, ResizeMode } from "expo-av";
 const details = () => {
   const toast = useToast();
   const param = useLocalSearchParams();
-  const video = useRef(null);
-  const [status, setStatus] = useState({});
   console.log(param);
 
   const copyText = async (text) => {
