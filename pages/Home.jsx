@@ -40,39 +40,53 @@ const HomeScreen = () => {
     hideDatePicker();
   };
   const search = async () => {
-    fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=7DChkcSwLmLU8Q5pHEOEZIGnW380N4QlEWeGBdCj&date=${
-        date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
-      }`,
-      {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (!data.code) {
-          router.push({ pathname: "/details", params: data });
-        } else {
-          toast.show(data.msg, {
+    try {
+      fetch(
+        `https://api.nasa.gov/planetary/apod?api_key=7DChkcSwLmLU8Q5pHEOEZIGnW380N4QlEWeGBdCj&date=${
+          date.getFullYear() +
+          "-" +
+          (date.getMonth() + 1) +
+          "-" +
+          date.getDate()
+        }`,
+        {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (!data.code) {
+            router.push({ pathname: "/details", params: data });
+          } else {
+            toast.show(data.msg, {
+              type: "danger",
+              placement: "bottom",
+              duration: 5000,
+              offset: 30,
+              animationType: "slide-in",
+            });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          toast.show("An error has occurred please restart the application", {
             type: "danger",
             placement: "bottom",
-            duration: 5000,
+            duration: 7000,
             offset: 30,
             animationType: "slide-in",
           });
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.show("An error has occurred please restart the application", {
-          type: "danger",
-          placement: "bottom",
-          duration: 7000,
-          offset: 30,
-          animationType: "slide-in",
         });
+    } catch (e) {
+      toast.show("Please choose a date", {
+        type: "warning",
+        placement: "bottom",
+        duration: 7000,
+        offset: 30,
+        animationType: "slide-in",
       });
+    }
   };
 
   return (
