@@ -26,9 +26,10 @@ const HomeScreen = () => {
 
   const handleConfirm = (date) => {
     setDate(date);
-    setYear(date.getUTCFullYear());
-    setMonth(date.getUTCMonth() + 1);
-    setDay(date.getUTCDate());
+    setYear(date.getFullYear());
+    setMonth(date.getMonth() + 1);
+    setDay(date.getDate());
+    console.log(date.getDate(), date.getFullYear(), date.getMonth() + 1);
     toast.show("Date a selected", {
       type: "success",
       placement: "bottom",
@@ -41,11 +42,7 @@ const HomeScreen = () => {
   const search = async () => {
     fetch(
       `https://api.nasa.gov/planetary/apod?api_key=7DChkcSwLmLU8Q5pHEOEZIGnW380N4QlEWeGBdCj&date=${
-        date.getUTCFullYear() +
-        "-" +
-        (date.getUTCMonth() + 1) +
-        "-" +
-        date.getUTCDate()
+        date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
       }`,
       {
         method: "GET",
@@ -80,7 +77,7 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar style="light" backgroundColor="black" />
+      <StatusBar style="auto" />
       <ImageBackground
         source={require("../assets/images/background.png")}
         resizeMode="cover"
