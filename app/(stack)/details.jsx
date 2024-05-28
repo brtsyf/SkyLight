@@ -6,7 +6,6 @@ import PressableButton from "../../Components/Button";
 import { StyleSheet } from "react-native";
 import { useToast } from "react-native-toast-notifications";
 import * as Clipboard from "expo-clipboard";
-import { Video, ResizeMode } from "expo-av";
 
 const details = () => {
   const toast = useToast();
