@@ -1,8 +1,8 @@
 import React from "react";
-import HomeScreen from "../../pages/Home";
+import MainMenu from "./mainMenu";
 
 const LayoutHome = () => {
-  return <HomeScreen />;
+  return <MainMenu />;
 };
 
 export default LayoutHome;

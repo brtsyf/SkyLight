@@ -1,4 +1,11 @@
-import { View, Text, ImageBackground, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  ImageBackground,
+  TouchableOpacity,
+  ScrollView,
+  FlatList,
+} from "react-native";
 import React, { useRef, useState } from "react";
 import { useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -17,7 +24,7 @@ const details = () => {
   const copyText = async (text) => {
     try {
       await Clipboard.setStringAsync(text);
-      toast.show("Copied Text", {
+      toast.show("Metin kopyalandı", {
         type: "success",
         placement: "bottom",
         duration: 1500,
@@ -25,7 +32,7 @@ const details = () => {
         animationType: "zoom-in",
       });
     } catch (e) {
-      toast.show("An error occurred while copying", {
+      toast.show("Metin kopyalanırken bir hata oluştu", {
         type: "danger",
         placement: "bottom",
         duration: 1500,
@@ -46,7 +53,7 @@ const details = () => {
           {param.media_type === "video" ? (
             <Text className="text-2xl text-[#C2C061]  text-center font-extrabold italic py-2">
               {" "}
-              Does not support video images!{" "}
+              Video görüntülerini desteklemiyor!{" "}
             </Text>
           ) : (
             <ImageBackground
@@ -69,12 +76,14 @@ const details = () => {
               copyText(param.explanation);
             }}
           >
-            <Text className="text-xs text-white text-center font-bold italic py-2 px-1 select-text">
-              {param.explanation}
-            </Text>
+            <ScrollView>
+              <Text className="text-xs text-white text-center font-bold italic py-2 px-4 select-text">
+                {param.explanation}
+              </Text>
+            </ScrollView>
           </TouchableOpacity>
           <View className="justify-center items-center">
-            <PressableButton href={param.url} title="Download" />
+            <PressableButton href={param.url} title="İndir" />
           </View>
         </View>
       </ImageBackground>
