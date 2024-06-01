@@ -1,10 +1,4 @@
-import {
-  View,
-  Text,
-  ImageBackground,
-  Pressable,
-  SwitchComponent,
-} from "react-native";
+import { View, Text, ImageBackground } from "react-native";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import DropDown from "../../Components/DropDown";
@@ -14,300 +8,300 @@ import Loading from "../../Components/Loading";
 
 const dateDay = [
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 28,
+    lable: "28",
     value: 28,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 31,
+    lable: "31",
     value: 31,
   },
   {
-    label: 30,
+    lable: "30",
     value: 30,
   },
 ];
 
 const dateMonth = [
   {
-    label: "Ocak",
+    lable: "Ocak",
     value: "Ocak",
   },
   {
-    label: "Şubat",
+    lable: "Şubat",
     value: "Şubat",
   },
   {
-    label: "Mart",
+    lable: "Mart",
     value: "Mart",
   },
   {
-    label: "Nisan",
+    lable: "Nisan",
     value: "Nisan",
   },
   {
-    label: "Mayıs",
+    lable: "Mayıs",
     value: "Mayıs",
   },
   {
-    label: "Haziran",
+    lable: "Haziran",
     value: "Haziran",
   },
   {
-    label: "Temmuz",
+    lable: "Temmuz",
     value: "Temmuz",
   },
   {
-    label: "Ağustos",
+    lable: "Ağustos",
     value: "Ağustos",
   },
   {
-    label: "Eylül",
+    lable: "Eylül",
     value: "Eylül",
   },
   {
-    label: "Ekim",
+    lable: "Ekim",
     value: "Ekim",
   },
   {
-    label: "Kasım",
+    lable: "Kasım",
     value: "Kasım",
   },
   {
-    label: "Aralık",
+    lable: "Aralık",
     value: "Aralık",
   },
 ];
 const dateYear = [
   {
-    label: 1995,
+    lable: "1995",
     value: 1995,
   },
   {
-    label: 1996,
+    lable: "1996",
     value: 1996,
   },
   {
-    label: 1997,
+    lable: "1997",
     value: 1997,
   },
   {
-    label: 1998,
+    lable: "1998",
     value: 1998,
   },
   {
-    label: 1999,
+    lable: "1999",
     value: 1999,
   },
   {
-    label: 2000,
+    lable: "2000",
     value: 2000,
   },
   {
-    label: 2001,
+    lable: "2001",
     value: 2001,
   },
   {
-    label: 2002,
+    lable: "2002",
     value: 2002,
   },
   {
-    label: 2003,
+    lable: "2003",
     value: 2003,
   },
   {
-    label: 2004,
+    lable: "2004",
     value: 2004,
   },
   {
-    label: 2005,
+    lable: "2005",
     value: 2005,
   },
   {
-    label: 2006,
+    lable: "2006",
     value: 2006,
   },
   {
-    label: 2007,
+    lable: "2007",
     value: 2007,
   },
   {
-    label: 2008,
+    lable: "2008",
     value: 2008,
   },
   {
-    label: 2009,
+    lable: "2009",
     value: 2009,
   },
   {
-    label: 2010,
+    lable: "2010",
     value: 2010,
   },
   {
-    label: 2011,
+    lable: "2011",
     value: 2011,
   },
   {
-    label: 2012,
+    lable: "2012",
     value: 2012,
   },
   {
-    label: 2013,
+    lable: "2013",
     value: 2013,
   },
   {
-    label: 2014,
+    lable: "2014",
     value: 2014,
   },
   {
-    label: 2015,
+    lable: "2015",
     value: 2015,
   },
   {
-    label: 2016,
+    lable: "2016",
     value: 2016,
   },
   {
-    label: 2017,
+    lable: "2017",
     value: 2017,
   },
   {
-    label: 2018,
+    lable: "2018",
     value: 2018,
   },
   {
-    label: 2019,
+    lable: "2019",
     value: 2019,
   },
   {
-    label: 2020,
+    lable: "2020",
     value: 2020,
   },
   {
-    label: 2021,
+    lable: "2021",
     value: 2021,
   },
   {
-    label: 2022,
+    lable: "2022",
     value: 2022,
   },
   {
-    label: 2023,
+    lable: "2023",
     value: 2023,
   },
   {
-    label: 2024,
+    lable: "2024",
     value: 2024,
   },
 ];
@@ -320,7 +314,10 @@ const FindAscendant = () => {
   const [ascendant, setAscendant] = useState(null);
   const toast = useToast();
   const [load, setLoad] = useState(false);
-
+  useEffect(() => {
+    console.log(year);
+    console.log(typeof day);
+  }, [year, day]);
   useEffect(() => {
     console.log(many);
     if (month) {
@@ -328,10 +325,13 @@ const FindAscendant = () => {
       for (
         let i = 1;
         i <=
-        dateDay[dateMonth.findIndex((item) => item?.label == month)]?.label;
+        dateDay[dateMonth.findIndex((item) => item?.lable == month)]?.lable;
         i++
       ) {
-        setMany((prev) => [...prev, { label: i, value: i }]);
+        setMany((prev) => [
+          ...prev,
+          { lable: i.toString(), value: i.toString() },
+        ]);
       }
     }
   }, [month]);
