@@ -1,310 +1,14 @@
-import { View, Text, ImageBackground } from "react-native";
+import { View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import DropDown from "../../Components/DropDown";
 import PressableButton from "../../Components/Button";
 import { useToast } from "react-native-toast-notifications";
 import Loading from "../../Components/Loading";
+import Header from "../../Components/Header";
+import Card from "../../Components/Card";
+import { dateDay, dateMonth, dateYear } from "../../data";
 
-const dateDay = [
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "28",
-    value: 28,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "31",
-    value: 31,
-  },
-  {
-    lable: "30",
-    value: 30,
-  },
-];
-
-const dateMonth = [
-  {
-    lable: "Ocak",
-    value: "Ocak",
-  },
-  {
-    lable: "Şubat",
-    value: "Şubat",
-  },
-  {
-    lable: "Mart",
-    value: "Mart",
-  },
-  {
-    lable: "Nisan",
-    value: "Nisan",
-  },
-  {
-    lable: "Mayıs",
-    value: "Mayıs",
-  },
-  {
-    lable: "Haziran",
-    value: "Haziran",
-  },
-  {
-    lable: "Temmuz",
-    value: "Temmuz",
-  },
-  {
-    lable: "Ağustos",
-    value: "Ağustos",
-  },
-  {
-    lable: "Eylül",
-    value: "Eylül",
-  },
-  {
-    lable: "Ekim",
-    value: "Ekim",
-  },
-  {
-    lable: "Kasım",
-    value: "Kasım",
-  },
-  {
-    lable: "Aralık",
-    value: "Aralık",
-  },
-];
-const dateYear = [
-  {
-    lable: "1995",
-    value: 1995,
-  },
-  {
-    lable: "1996",
-    value: 1996,
-  },
-  {
-    lable: "1997",
-    value: 1997,
-  },
-  {
-    lable: "1998",
-    value: 1998,
-  },
-  {
-    lable: "1999",
-    value: 1999,
-  },
-  {
-    lable: "2000",
-    value: 2000,
-  },
-  {
-    lable: "2001",
-    value: 2001,
-  },
-  {
-    lable: "2002",
-    value: 2002,
-  },
-  {
-    lable: "2003",
-    value: 2003,
-  },
-  {
-    lable: "2004",
-    value: 2004,
-  },
-  {
-    lable: "2005",
-    value: 2005,
-  },
-  {
-    lable: "2006",
-    value: 2006,
-  },
-  {
-    lable: "2007",
-    value: 2007,
-  },
-  {
-    lable: "2008",
-    value: 2008,
-  },
-  {
-    lable: "2009",
-    value: 2009,
-  },
-  {
-    lable: "2010",
-    value: 2010,
-  },
-  {
-    lable: "2011",
-    value: 2011,
-  },
-  {
-    lable: "2012",
-    value: 2012,
-  },
-  {
-    lable: "2013",
-    value: 2013,
-  },
-  {
-    lable: "2014",
-    value: 2014,
-  },
-  {
-    lable: "2015",
-    value: 2015,
-  },
-  {
-    lable: "2016",
-    value: 2016,
-  },
-  {
-    lable: "2017",
-    value: 2017,
-  },
-  {
-    lable: "2018",
-    value: 2018,
-  },
-  {
-    lable: "2019",
-    value: 2019,
-  },
-  {
-    lable: "2020",
-    value: 2020,
-  },
-  {
-    lable: "2021",
-    value: 2021,
-  },
-  {
-    lable: "2022",
-    value: 2022,
-  },
-  {
-    lable: "2023",
-    value: 2023,
-  },
-  {
-    lable: "2024",
-    value: 2024,
-  },
-];
 const FindAscendant = () => {
   const [day, setDay] = useState(null);
   const [many, setMany] = useState([]);
@@ -312,12 +16,8 @@ const FindAscendant = () => {
   const [year, setYear] = useState(null);
   const [horoscope, setHoroscope] = useState(null);
   const [ascendant, setAscendant] = useState(null);
+  const [active, setActive] = useState(false);
   const toast = useToast();
-  const [load, setLoad] = useState(false);
-  useEffect(() => {
-    console.log(year);
-    console.log(typeof day);
-  }, [year, day]);
   useEffect(() => {
     console.log(many);
     if (month) {
@@ -674,63 +374,52 @@ const FindAscendant = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ImageBackground
-        source={require("../../assets/images/background.png")}
-        style={{ flex: 1 }}
-      >
-        <View className="flex-1">
-          <Text className="text-2xl text-center pt-3 text-white font-extrabold italic">
-            Opsiyonları Seçmeye Başlayın
-          </Text>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#070707" }}>
+      <Header />
+
+      <View className="flex-4 ">
+        <View className="flex-1 ">
+          <DropDown setChange={setYear} items={dateYear} />
         </View>
-        <View className="flex-4 ">
-          <View className="flex-1 flex-row  ">
-            <DropDown setChange={setYear} items={dateYear} />
-            {year ? <DropDown setChange={setMonth} items={dateMonth} /> : ""}
-          </View>
-          {month && year ? (
-            <View className="flex-1 items-center flex-row ">
-              <DropDown setChange={setDay} items={many} />
+        <View className="flex-1 flex-row ">
+          {year ? <DropDown setChange={setMonth} items={dateMonth} /> : ""}
+          {month && year ? <DropDown setChange={setDay} items={many} /> : ""}
+        </View>
+        <View className="flex-1 justify-end items-center ">
+          <PressableButton
+            title="YILDIZLARA GİT"
+            onClick={() => {
+              findHoroscope(month, day);
+              if (active) {
+                setActive(false);
+                setTimeout(() => {
+                  setActive(true);
+                }, 2200);
+              } else {
+                setTimeout(() => {
+                  setActive(true);
+                }, 2200);
+              }
+            }}
+          />
+        </View>
+      </View>
+      <View className="flex-5 p-5">
+        {horoscope &&
+          ascendant &&
+          (active ? (
+            <View className="h-full px-2 py-5  w-full  bg-[#9494941c] rounded-3xl flex-row">
+              <Card cardTitle="Burç" cardValue={horoscope} />
+              {ascendant ? (
+                <Card cardTitle="Yükselen" cardValue={ascendant} />
+              ) : (
+                ""
+              )}
             </View>
           ) : (
-            ""
-          )}
-          <View className="items-center my-2">
-            <PressableButton
-              title="Araştır"
-              onClick={() => {
-                findHoroscope(month, day);
-                setTimeout(() => {
-                  setLoad(true);
-                }, 2200);
-              }}
-            />
-          </View>
-        </View>
-        <View className="flex-6 p-5">
-          {horoscope ? (
-            load ? (
-              <View className="h-full w-full bg-[#b7b7b721] rounded-3xl">
-                <Text className="text-[#d6dd6e] text-2xl text-center font-extrabold italic py-2">
-                  Senin Burcun : "{horoscope}"
-                </Text>
-                {ascendant ? (
-                  <Text className="text-[#d6dd6e] text-2xl text-center font-extrabold italic py-2">
-                    Senin Yükselenin : "{ascendant}"
-                  </Text>
-                ) : (
-                  ""
-                )}
-              </View>
-            ) : (
-              <Loading />
-            )
-          ) : (
-            ""
-          )}
-        </View>
-      </ImageBackground>
+            <Loading />
+          ))}
+      </View>
     </SafeAreaView>
   );
 };

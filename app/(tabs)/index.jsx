@@ -4,9 +4,9 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { router } from "expo-router";
 import { useToast } from "react-native-toast-notifications";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StatusBar } from "expo-status-bar";
 import PressableButton from "../../Components/Button";
 import CountShower from "../../Components/CountShower";
+import Header from "../../Components/Header";
 const HomeScreen = () => {
   const [date, setDate] = useState(null);
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
@@ -90,44 +90,40 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar style="auto" />
-      <ImageBackground
-        source={require("../../assets/images/background.png")}
-        resizeMode="cover"
-        style={{ flex: 1 }}
-      >
-        <View className="flex-1">
-          <View className="flex-1 justify-end">
-            <Text className="text-2xl text-white text-center font-extrabold italic py-2">
-              GÖKYÜZÜNÜN SONSUZ {"\n"} SAHNESİNDE YERİNİZİ BULUN
-            </Text>
-          </View>
-          <View className="flex-5 justify-end box-border">
-            <View className="flex-1 flex-col pb-2 items-center">
-              <CountShower countValue={day} />
-              <CountShower countValue={month} />
-              <CountShower countValue={year} />
-            </View>
-            <View className="gap-4 justify-end pb-20">
-              <View className="justify-center items-center">
-                <PressableButton
-                  title="Bir Tarih Seçin"
-                  onClick={showDatePicker}
-                />
-              </View>
-              <View className="justify-center items-center">
-                <PressableButton title="Araştır" onClick={search} />
-              </View>
-            </View>
-            <DateTimePickerModal
-              isVisible={isDatePickerVisible}
-              mode="date"
-              onConfirm={handleConfirm}
-              onCancel={hideDatePicker}
-            />
-          </View>
+      <Header />
+      <View className="flex-10 bg-[#070707]">
+        <View className="flex-1 justify-end">
+          <Text className="text-2xl text-[#9990FF] text-center font-extrabold pt-4 italic ">
+            GÖKYÜZÜNÜN SONSUZ {"\n"} SAHNESİNDE YERİNİZİ BULUN
+          </Text>
         </View>
-      </ImageBackground>
+        <View className="flex-6 justify-end box-border">
+          <View className="flex-2 pt-10  flex-col  items-center">
+            <CountShower countValue={day} />
+            <CountShower countValue={month} />
+            <CountShower countValue={year} />
+          </View>
+          <View className="flex-1 gap-3 justify-end pb-8 ">
+            <View className="justify-center my-1 items-center">
+              <PressableButton
+                title="Şanslı Tarihi Seç"
+                onClick={showDatePicker}
+              />
+            </View>
+            <View className="justify-center items-center">
+              <PressableButton title="Yıldızlara Git" onClick={search} />
+            </View>
+          </View>
+          <DateTimePickerModal
+            isVisible={isDatePickerVisible}
+            mode="date"
+            display="spinner"
+            isDarkModeEnabled={true}
+            onConfirm={handleConfirm}
+            onCancel={hideDatePicker}
+          />
+        </View>
+      </View>
     </SafeAreaView>
   );
 };

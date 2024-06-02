@@ -1,11 +1,11 @@
-import { Slot } from 'expo-router'
-import { ToastProvider } from 'react-native-toast-notifications'
+import { Slot } from "expo-router";
+import { ToastProvider } from "react-native-toast-notifications";
 const Layout = () => {
   return (
     <ToastProvider>
-    <Slot/>
+      <Slot />
     </ToastProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

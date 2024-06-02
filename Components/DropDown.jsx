@@ -14,10 +14,15 @@ const DropDown = ({ setChange, items }) => {
       value={country}
       data={[...items]}
       itemContainerStyle={{
-        backgroundColor: "transparent",
+        backgroundColor: "#7d72f91c",
+        color: "white",
         height: 45,
       }}
-      containerStyle={{ backgroundColor: "#b7b7b721", marginTop: 5 }}
+      containerStyle={{
+        backgroundColor: "#9990FF",
+        marginTop: 5,
+        borderWidth: 0,
+      }}
       valueField="value"
       labelField="lable"
       imageField="image"
@@ -37,7 +42,6 @@ const styles = StyleSheet.create({
   dropdown: {
     margin: 16,
     flex: 1,
-    height: 75,
     backgroundColor: "#b7b7b721",
     borderRadius: 22,
     paddingHorizontal: 8,
@@ -47,15 +51,15 @@ const styles = StyleSheet.create({
   },
 
   placeholderStyle: {
-    fontSize: 22,
-    color: "#d6dd6e",
-    fontWeight: "700",
+    fontSize: 24,
+    color: "white",
+    fontWeight: "200",
     marginLeft: 8,
   },
   selectedTextStyle: {
-    fontSize: 20,
+    fontSize: 22,
     marginLeft: 8,
-    fontWeight: "700",
-    color: "#d6dd6e",
+    fontWeight: "200",
+    color: "white",
   },
 });

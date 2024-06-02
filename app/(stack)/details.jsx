@@ -4,22 +4,17 @@ import {
   ImageBackground,
   TouchableOpacity,
   ScrollView,
-  FlatList,
 } from "react-native";
-import React, { useRef, useState } from "react";
-import { useLocalSearchParams } from "expo-router";
+import React from "react";
+import { Link, router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import PressableButton from "../../Components/Button";
-import { StyleSheet } from "react-native";
 import { useToast } from "react-native-toast-notifications";
 import * as Clipboard from "expo-clipboard";
-
+import { AntDesign } from "@expo/vector-icons";
 const details = () => {
   const toast = useToast();
   const param = useLocalSearchParams();
-  const video = useRef(null);
-  const [status, setStatus] = useState({});
-  console.log(param);
 
   const copyText = async (text) => {
     try {
@@ -43,15 +38,19 @@ const details = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1">
-      <ImageBackground
-        source={require("../../assets/images/background.png")}
-        resizeMode="cover"
-        style={{ flex: 1 }}
-      >
+    <SafeAreaView className="flex-1 bg-[#070707]">
+      <View className="flex-1 border-b-[1px] border-white justify-center items-center  px-4 flex-row">
+        <TouchableOpacity onPress={() => router.back()} className="flex-row">
+          <AntDesign name="back" size={26} color="#9990FF" />
+          <Text className="text-left px-2 text-xl text-[#9990FF] flex-12">
+            Geri
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <View className="flex-12">
         <View className="flex-2 my-2 px-3 ">
           {param.media_type === "video" ? (
-            <Text className="text-2xl text-[#C2C061]  text-center font-extrabold italic py-2">
+            <Text className="text-2xl text-[#C2C061]  text-center font-light italic py-2">
               {" "}
               Video görüntülerini desteklemiyor!{" "}
             </Text>
@@ -65,47 +64,34 @@ const details = () => {
           )}
         </View>
         <View className="flex-4">
-          <Text className="text-2xl text-[#C2C061]  text-center font-extrabold italic py-2">
+          <Text className="text-2xl text-[#9990FF]  text-center font-extrabold italic py-2">
             {param.title}
           </Text>
-          <Text className="text-md text-[#C2C061]  text-center font-extrabold italic py-1">
+          <Text className="text-md text-[#9990FF]  text-center font-extrabold italic py-1">
             {param.date}
           </Text>
-          <TouchableOpacity
-            onPress={() => {
-              copyText(param.explanation);
-            }}
-          >
-            <ScrollView>
-              <Text className="text-xs text-white text-center font-bold italic py-2 px-4 select-text">
-                {param.explanation}
-              </Text>
-            </ScrollView>
-          </TouchableOpacity>
-          <View className="justify-center items-center">
+
+          <ScrollView scrollEnabled>
+            <Text className="text-xs text-white text-center font-bold italic py-2 px-4 select-text">
+              {param.explanation}
+            </Text>
+          </ScrollView>
+
+          <View className="my-2 justify-center items-center">
             <PressableButton href={param.url} title="İndir" />
           </View>
+          <View className="my-2 justify-center items-center">
+            <PressableButton
+              title="Metni Kopyala"
+              onClick={() => {
+                copyText(param.explanation);
+              }}
+            />
+          </View>
         </View>
-      </ImageBackground>
+      </View>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  contentContainer: {
-    flex: 1,
-    padding: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: 50,
-  },
-  video: {
-    width: 350,
-    height: 275,
-  },
-  controlsContainer: {
-    padding: 10,
-  },
-});
 
 export default details;

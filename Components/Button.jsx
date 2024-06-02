@@ -9,11 +9,9 @@ const PressableButton = ({ title, href, onClick }) => {
         onPress={() => {
           onClick ? onClick() : null;
         }}
-        className="w-[85%] h-16 px-2  bg-[#07345A] text-center rounded-full justify-center items-center border-4 border-[#A26F55]"
+        className="w-[90%] h-14 px-2  bg-[#9990FF] text-center rounded-full justify-center items-center "
       >
-        <Text className="text-[#C2C061] text-xl font-extrabold italic">
-          {title}
-        </Text>
+        <Text className="text-white text-xl  italic">{title}</Text>
       </TouchableOpacity>
     </Link>
   ) : (
@@ -21,11 +19,9 @@ const PressableButton = ({ title, href, onClick }) => {
       onPress={() => {
         onClick ? onClick() : null;
       }}
-      className="w-[75%] h-16  bg-[#07345A] text-center rounded-full justify-center items-center border-4 border-[#A26F55]"
+      className="w-[90%] h-14  bg-[#9990FF] text-center rounded-full justify-center items-center "
     >
-      <Text className="text-[#C2C061] text-3xl font-extrabold italic">
-        {title}
-      </Text>
+      <Text className="text-white text-xl  italic">{title}</Text>
     </TouchableOpacity>
   );
 };
