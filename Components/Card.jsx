@@ -25,7 +25,7 @@ const Card = ({ cardTitle, cardValue }) => {
             width={500}
             loop={false}
             height={600}
-            scale={0.315}
+            scale={0.3}
             delay={100}
             ds={ds}
           />
@@ -43,7 +43,7 @@ const styles = {
   cardContainer: {
     flex: 1,
     margin: 4,
-    backgroundColor: "#7d72f91c",
+    backgroundColor: "#9494941c",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,

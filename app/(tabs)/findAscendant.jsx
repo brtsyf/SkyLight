@@ -8,7 +8,8 @@ import Loading from "../../Components/Loading";
 import Header from "../../Components/Header";
 import Card from "../../Components/Card";
 import { dateDay, dateMonth, dateYear } from "../../data";
-import { StatusBar } from "expo-status-bar";
+import BackgroundImage from "../../Components/BackgroundImage";
+
 const FindAscendant = () => {
   const [day, setDay] = useState(null);
   const [many, setMany] = useState([]);
@@ -374,17 +375,25 @@ const FindAscendant = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#070707" }}>
+    <BackgroundImage>
       <Header />
-      <View className="flex-4 ">
-        <View className="flex-1 ">
+      <View className="flex-4">
+        <View className="flex-1   ">
           <DropDown setChange={setYear} items={dateYear} />
         </View>
-        <View className="flex-1 flex-row ">
-          {year ? <DropDown setChange={setMonth} items={dateMonth} /> : ""}
-          {month && year ? <DropDown setChange={setDay} items={many} /> : ""}
-        </View>
-        <View className="flex-1 justify-end items-center ">
+        {year ? (
+          <View className="flex-1 flex-row ">
+            {year ? <DropDown setChange={setMonth} items={dateMonth} /> : ""}
+            {month && year ? <DropDown setChange={setDay} items={many} /> : ""}
+          </View>
+        ) : (
+          ""
+        )}
+        <View
+          className={`${
+            year ? "flex-1 justify-center" : "flex-2"
+          } transition-all  items-center   `}
+        >
           <PressableButton
             title="YILDIZLARA GİT"
             onClick={() => {
@@ -403,7 +412,7 @@ const FindAscendant = () => {
           />
         </View>
       </View>
-      <View className="flex-5 p-5">
+      <View className="flex-5 px-5 pb-5">
         {horoscope && ascendant ? (
           active ? (
             <View className="h-full px-2 py-5  w-full  bg-[#9494941c] rounded-3xl flex-row">
@@ -417,7 +426,7 @@ const FindAscendant = () => {
           ""
         )}
       </View>
-    </SafeAreaView>
+    </BackgroundImage>
   );
 };
 

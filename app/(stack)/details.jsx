@@ -12,6 +12,7 @@ import PressableButton from "../../Components/Button";
 import { useToast } from "react-native-toast-notifications";
 import * as Clipboard from "expo-clipboard";
 import { AntDesign } from "@expo/vector-icons";
+import BackgroundImage from "../../Components/BackgroundImage";
 const details = () => {
   const toast = useToast();
   const param = useLocalSearchParams();
@@ -38,8 +39,8 @@ const details = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-[#070707]">
-      <View className="flex-1 border-b-[1px] border-white justify-center items-center  px-4 flex-row">
+    <BackgroundImage>
+      <View className="flex-1  justify-center items-center  px-4 flex-row">
         <TouchableOpacity onPress={() => router.back()} className="flex-row">
           <AntDesign name="back" size={26} color="#9990FF" />
           <Text className="text-left px-2 text-xl text-[#9990FF] flex-12">
@@ -90,7 +91,7 @@ const details = () => {
           </View>
         </View>
       </View>
-    </SafeAreaView>
+    </BackgroundImage>
   );
 };
 

@@ -7,7 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import PressableButton from "../../Components/Button";
 import CountShower from "../../Components/CountShower";
 import Header from "../../Components/Header";
-import { StatusBar } from "expo-status-bar";
+import BackgroundImage from "../../Components/BackgroundImage";
 
 const HomeScreen = () => {
   const [date, setDate] = useState(null);
@@ -90,7 +90,7 @@ const HomeScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#070707" }}>
+    <BackgroundImage>
       <Header />
       <View className="flex-10 ">
         <View className="flex-1 justify-end">
@@ -119,13 +119,21 @@ const HomeScreen = () => {
             isVisible={isDatePickerVisible}
             mode="date"
             display="spinner"
+            minimumDate={new Date("1995-06-16")}
+            maximumDate={
+              new Date(
+                `${new Date().getFullYear()}-${
+                  new Date().getMonth() + 1
+                }-${new Date().getDate()}`
+              )
+            }
             isDarkModeEnabled={false}
             onConfirm={handleConfirm}
             onCancel={hideDatePicker}
           />
         </View>
       </View>
-    </SafeAreaView>
+    </BackgroundImage>
   );
 };
 
