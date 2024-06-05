@@ -21,16 +21,19 @@ const DropDown = ({ setChange, items }) => {
         }),
       ]}
       itemContainerStyle={{
-        backgroundColor: "#7d72f91c",
+        backgroundColor: "transparent",
         color: "white",
         height: 45,
+        borderRadius: 10,
       }}
+      selecte
       imageStyle={styles.imageStyle}
       iconStyle={styles.iconStyle}
       containerStyle={{
-        backgroundColor: "#9990FF15",
+        backgroundColor: "#9990FF",
         marginTop: 5,
         borderWidth: 0,
+        borderRadius: 10,
       }}
       valueField="value"
       labelField="lable"
