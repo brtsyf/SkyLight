@@ -4,7 +4,6 @@ import { SelectCountry } from "react-native-element-dropdown";
 
 const DropDown = ({ setChange, items }) => {
   const [country, setCountry] = useState("1");
-  console.log(items);
   return (
     <SelectCountry
       style={styles.dropdown}
@@ -12,12 +11,22 @@ const DropDown = ({ setChange, items }) => {
       placeholderStyle={styles.placeholderStyle}
       maxHeight={200}
       value={country}
-      data={[...items]}
+      data={[
+        ...items.map((item) => {
+          return {
+            value: item.value,
+            lable: item.lable,
+            image: require("../assets/images/5_9267884.png"),
+          };
+        }),
+      ]}
       itemContainerStyle={{
         backgroundColor: "#7d72f91c",
         color: "white",
         height: 45,
       }}
+      imageStyle={styles.imageStyle}
+      iconStyle={styles.iconStyle}
       containerStyle={{
         backgroundColor: "#9990FF",
         marginTop: 5,
@@ -49,7 +58,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
+  imageStyle: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+  },
   placeholderStyle: {
     fontSize: 24,
     color: "white",
@@ -61,5 +74,9 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     fontWeight: "200",
     color: "white",
+  },
+  iconStyle: {
+    width: 20,
+    height: 20,
   },
 });

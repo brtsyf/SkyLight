@@ -8,7 +8,7 @@ import Loading from "../../Components/Loading";
 import Header from "../../Components/Header";
 import Card from "../../Components/Card";
 import { dateDay, dateMonth, dateYear } from "../../data";
-
+import { StatusBar } from "expo-status-bar";
 const FindAscendant = () => {
   const [day, setDay] = useState(null);
   const [many, setMany] = useState([]);
@@ -117,7 +117,7 @@ const FindAscendant = () => {
         });
       }
     } else {
-      toast.show("Please select a options", {
+      toast.show("Lütfen Seçenekleri Doldurunuz", {
         type: "warning",
         placement: "bottom",
         duration: 3000,
@@ -376,7 +376,6 @@ const FindAscendant = () => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#070707" }}>
       <Header />
-
       <View className="flex-4 ">
         <View className="flex-1 ">
           <DropDown setChange={setYear} items={dateYear} />
@@ -405,20 +404,18 @@ const FindAscendant = () => {
         </View>
       </View>
       <View className="flex-5 p-5">
-        {horoscope &&
-          ascendant &&
-          (active ? (
+        {horoscope && ascendant ? (
+          active ? (
             <View className="h-full px-2 py-5  w-full  bg-[#9494941c] rounded-3xl flex-row">
               <Card cardTitle="Burç" cardValue={horoscope} />
-              {ascendant ? (
-                <Card cardTitle="Yükselen" cardValue={ascendant} />
-              ) : (
-                ""
-              )}
+              <Card cardTitle="Yükselen" cardValue={ascendant} />
             </View>
           ) : (
             <Loading />
-          ))}
+          )
+        ) : (
+          ""
+        )}
       </View>
     </SafeAreaView>
   );

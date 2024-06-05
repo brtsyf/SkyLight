@@ -7,6 +7,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import PressableButton from "../../Components/Button";
 import CountShower from "../../Components/CountShower";
 import Header from "../../Components/Header";
+import { StatusBar } from "expo-status-bar";
+
 const HomeScreen = () => {
   const [date, setDate] = useState(null);
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
@@ -68,7 +70,6 @@ const HomeScreen = () => {
           }
         })
         .catch((err) => {
-          console.log(err);
           toast.show("Bir hata oluştu lütfen uygulamayı yeniden başlatın", {
             type: "danger",
             placement: "bottom",
@@ -89,9 +90,9 @@ const HomeScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#070707" }}>
       <Header />
-      <View className="flex-10 bg-[#070707]">
+      <View className="flex-10 ">
         <View className="flex-1 justify-end">
           <Text className="text-2xl text-[#9990FF] text-center font-extrabold pt-4 italic ">
             GÖKYÜZÜNÜN SONSUZ {"\n"} SAHNESİNDE YERİNİZİ BULUN
@@ -118,7 +119,7 @@ const HomeScreen = () => {
             isVisible={isDatePickerVisible}
             mode="date"
             display="spinner"
-            isDarkModeEnabled={true}
+            isDarkModeEnabled={false}
             onConfirm={handleConfirm}
             onCancel={hideDatePicker}
           />
