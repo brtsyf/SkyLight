@@ -1,20 +1,20 @@
-import { View, Text, ImageBackground } from "react-native";
+import { View, Text } from "react-native";
 import React, { useState } from "react";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { router } from "expo-router";
 import { useToast } from "react-native-toast-notifications";
-import { SafeAreaView } from "react-native-safe-area-context";
 import PressableButton from "../../Components/Button";
 import CountShower from "../../Components/CountShower";
 import Header from "../../Components/Header";
 import BackgroundImage from "../../Components/BackgroundImage";
-
+import { useColorScheme } from "react-native";
 const HomeScreen = () => {
   const [date, setDate] = useState(null);
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [day, setDay] = useState("GÜN");
   const [month, setMonth] = useState("AY");
   const [year, setYear] = useState("YIL");
+  const colorScheme = useColorScheme();
   const toast = useToast();
 
   const showDatePicker = () => {
@@ -119,7 +119,13 @@ const HomeScreen = () => {
             isVisible={isDatePickerVisible}
             mode="date"
             display="spinner"
+            date={new Date("1995-06-16")}
             minimumDate={new Date("1995-06-16")}
+            confirmButtonTestID={{
+              text: {
+                color: "red",
+              },
+            }}
             maximumDate={
               new Date(
                 `${new Date().getFullYear()}-${
@@ -127,6 +133,12 @@ const HomeScreen = () => {
                 }-${new Date().getDate()}`
               )
             }
+            positiveButton={{
+              textColor: `${colorScheme == "dark" ? "white" : "black"}`,
+            }}
+            negativeButton={{
+              textColor: `${colorScheme == "dark" ? "white" : "black"}`,
+            }}
             isDarkModeEnabled={false}
             onConfirm={handleConfirm}
             onCancel={hideDatePicker}
