@@ -43,7 +43,7 @@ const styles = {
   cardContainer: {
     flex: 1,
     margin: 4,
-    backgroundColor: "#9494941c",
+    backgroundColor: "transparent",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,
@@ -58,7 +58,7 @@ const styles = {
   },
   titleText: {
     color: "#9990FF",
-    fontSize: 20,
+    fontSize: 23,
     textAlign: "center",
     fontWeight: "bold",
     fontStyle: "italic",

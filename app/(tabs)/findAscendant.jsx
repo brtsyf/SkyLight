@@ -412,19 +412,21 @@ const FindAscendant = () => {
           />
         </View>
       </View>
-      <View className="flex-5 px-5 pb-5">
-        {horoscope && ascendant ? (
-          active ? (
-            <View className="h-full px-2 py-5  w-full  bg-[#9494941c] rounded-3xl flex-row">
-              <Card cardTitle="Burç" cardValue={horoscope} />
-              <Card cardTitle="Yükselen" cardValue={ascendant} />
-            </View>
+      <View className="flex-5 px-5 pb-4">
+        <View className="h-full px-2 py-5  w-full bg-[#9494941c] rounded-3xl flex-row">
+          {horoscope && ascendant ? (
+            active ? (
+              <>
+                <Card cardTitle="Burç" cardValue={horoscope} />
+                <Card cardTitle="Yükselen" cardValue={ascendant} />
+              </>
+            ) : (
+              <Loading />
+            )
           ) : (
-            <Loading />
-          )
-        ) : (
-          ""
-        )}
+            ""
+          )}
+        </View>
       </View>
     </BackgroundImage>
   );

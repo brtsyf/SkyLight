@@ -26,7 +26,7 @@ const DropDown = ({ setChange, items }) => {
         height: 45,
         borderRadius: 10,
       }}
-      selecte
+      activeColor="#fff4"
       imageStyle={styles.imageStyle}
       iconStyle={styles.iconStyle}
       containerStyle={{
