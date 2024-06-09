@@ -1,18 +1,11 @@
-import {
-  View,
-  Text,
-  ImageBackground,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
+import { View, Text, ImageBackground, ScrollView } from "react-native";
 import React from "react";
-import { Link, router, useLocalSearchParams } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useLocalSearchParams } from "expo-router";
 import PressableButton from "../../Components/Button";
 import { useToast } from "react-native-toast-notifications";
 import * as Clipboard from "expo-clipboard";
-import { AntDesign } from "@expo/vector-icons";
 import BackgroundImage from "../../Components/BackgroundImage";
+import Goback from "../../Components/Goback";
 const details = () => {
   const toast = useToast();
   const param = useLocalSearchParams();
@@ -40,14 +33,7 @@ const details = () => {
 
   return (
     <BackgroundImage>
-      <View className="flex-1  justify-center items-center  px-4 flex-row">
-        <TouchableOpacity onPress={() => router.back()} className="flex-row">
-          <AntDesign name="back" size={26} color="#9990FF" />
-          <Text className="text-left px-2 text-xl text-[#9990FF] flex-12">
-            Geri
-          </Text>
-        </TouchableOpacity>
-      </View>
+      <Goback />
       <View className="flex-12">
         <View className="flex-2 my-2 px-3 ">
           {param.media_type === "video" ? (

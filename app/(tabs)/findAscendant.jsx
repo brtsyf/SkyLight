@@ -1,8 +1,7 @@
 import { View } from "react-native";
 import React, { useEffect, useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import DropDown from "../../Components/DropDown";
 import PressableButton from "../../Components/Button";
+import DropDown from "../../Components/DropDown";
 import { useToast } from "react-native-toast-notifications";
 import Loading from "../../Components/Loading";
 import Header from "../../Components/Header";
@@ -377,7 +376,7 @@ const FindAscendant = () => {
   return (
     <BackgroundImage>
       <Header />
-      <View className="flex-4">
+      <View className="flex-5">
         <View className="flex-1   ">
           <DropDown setChange={setYear} items={dateYear} />
         </View>
