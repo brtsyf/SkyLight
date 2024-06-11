@@ -30,8 +30,8 @@ const DropDown = ({ setChange, items }) => {
       imageStyle={styles.imageStyle}
       iconStyle={styles.iconStyle}
       containerStyle={{
-        backgroundColor: "#9990FF",
-        marginTop: 5,
+        backgroundColor: "#393939",
+        marginTop: 10,
         borderWidth: 0,
         borderRadius: 10,
       }}
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     marginVertical: 14,
     flex: 1,
-    backgroundColor: "#9990FF15",
+    backgroundColor: "#9494941c",
     borderRadius: 22,
     paddingHorizontal: 8,
     textAlign: "center",
@@ -70,12 +70,12 @@ const styles = StyleSheet.create({
   placeholderStyle: {
     fontSize: 23,
     color: "white",
-    fontWeight: 200,
+    fontWeight: 350,
     marginLeft: 8,
   },
   selectedTextStyle: {
     fontSize: 22,
-    fontWeight: 200,
+    fontWeight: 350,
     marginLeft: 8,
     color: "white",
   },

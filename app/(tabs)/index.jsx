@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React, { useState } from "react";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
-import { router } from "expo-router";
+import { router, usePathname } from "expo-router";
 import { useToast } from "react-native-toast-notifications";
 import PressableButton from "../../Components/Button";
 import CountShower from "../../Components/CountShower";
@@ -119,7 +119,7 @@ const HomeScreen = () => {
             isVisible={isDatePickerVisible}
             mode="date"
             display="spinner"
-            date={new Date("1995-06-16")}
+            date={new Date("2004-05-30")}
             minimumDate={new Date("1995-06-16")}
             confirmButtonTestID={{
               text: {

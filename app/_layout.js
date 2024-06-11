@@ -3,7 +3,12 @@ import { StatusBar } from "expo-status-bar";
 import { ToastProvider } from "react-native-toast-notifications";
 const Layout = () => {
   return (
-    <ToastProvider>
+    <ToastProvider
+      successColor="#9990FF"
+      dangerColor="red"
+      warningColor="orange"
+      normalColor="gray"
+    >
       <StatusBar style="auto" />
       <Slot />
     </ToastProvider>
