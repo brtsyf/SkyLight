@@ -23,7 +23,7 @@ function CustomTab({ state, descriptors, navigation }) {
     };
   });
   return (
-    <View className="h-24 justify-center  bg-[#010101] items-center px-2 py-1  flex-row">
+    <View className="h-24 justify-center  bg-[#060606] items-center px-2 py-1  flex-row">
       <View
         style={{ width: TAB_BAR_WIDTH }}
         className={` h-16 border-2  bg-[#9494941c] rounded-full justify-center items-center flex-row`}

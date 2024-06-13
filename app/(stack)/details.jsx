@@ -34,7 +34,7 @@ const details = () => {
   return (
     <BackgroundImage>
       <Goback />
-      <View className="flex-12">
+      <View className="flex-12 pb-4">
         <View className="flex-2 my-2 px-3 ">
           {param.media_type === "video" ? (
             <Text className="text-2xl text-[#C2C061]  text-center font-light italic py-2">
