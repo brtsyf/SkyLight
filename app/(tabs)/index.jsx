@@ -94,7 +94,7 @@ const HomeScreen = () => {
       <Header />
       <View className="flex-10 ">
         <View className="flex-1 justify-end">
-          <Text className="text-2xl text-[#9990FF] text-center font-extrabold pt-4 italic ">
+          <Text className="text-2xl text-primary text-center font-extrabold pt-4 italic ">
             GÖKYÜZÜNÜN SONSUZ {"\n"} SAHNESİNDE YERİNİZİ BULUN
           </Text>
         </View>

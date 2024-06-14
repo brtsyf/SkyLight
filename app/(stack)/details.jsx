@@ -51,10 +51,10 @@ const details = () => {
           )}
         </View>
         <View className="flex-4">
-          <Text className="text-2xl text-[#9990FF]  text-center font-extrabold italic py-2">
+          <Text className="text-2xl text-primary  text-center font-extrabold italic py-2">
             {param.title}
           </Text>
-          <Text className="text-md text-[#9990FF]  text-center font-extrabold italic py-1">
+          <Text className="text-md text-primary  text-center font-extrabold italic py-1">
             {param.date}
           </Text>
 
