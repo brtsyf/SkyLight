@@ -22,7 +22,7 @@ const TabBarIcon = ({ route }) => {
       case "index":
         usePath(TabsData[0].icon);
         break;
-      case "findAscendant":
+      case "findAscendant/index":
         usePath(TabsData[1].icon);
         break;
       default:

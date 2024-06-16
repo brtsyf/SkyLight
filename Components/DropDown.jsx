@@ -35,6 +35,7 @@ const DropDown = ({ setChange, items }) => {
         borderWidth: 0,
         borderRadius: 10,
       }}
+      iconColor="white"
       valueField="value"
       labelField="lable"
       imageField="image"

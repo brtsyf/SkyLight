@@ -1,15 +1,18 @@
 import { View } from "react-native";
-import React, { useEffect, useState } from "react";
-import PressableButton from "../../Components/Button";
-import DropDown from "../../Components/DropDown";
+import { useEffect, useState } from "react";
+import PressableButton from "../../../Components/Button";
+import DropDown from "../../../Components/DropDown";
 import { useToast } from "react-native-toast-notifications";
-import Loading from "../../Components/Loading";
-import Header from "../../Components/Header";
-import Card from "../../Components/Card";
-import { dateDay, dateMonth, dateYear } from "../../data";
-import BackgroundImage from "../../Components/BackgroundImage";
+import Loading from "../../../Components/Loading";
+import Header from "../../../Components/Header";
+import Card from "../../../Components/Card";
+import { dateDay, dateMonth, dateYear } from "../../../data";
+import BackgroundImage from "../../../Components/BackgroundImage";
+import { usePathname } from "expo-router";
 
 const FindAscendant = () => {
+  const path = usePathname();
+  console.log(path);
   const [day, setDay] = useState(null);
   const [many, setMany] = useState([]);
   const [month, setMonth] = useState(null);
