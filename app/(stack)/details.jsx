@@ -6,6 +6,7 @@ import { useToast } from "react-native-toast-notifications";
 import * as Clipboard from "expo-clipboard";
 import BackgroundImage from "../../Components/BackgroundImage";
 import Goback from "../../Components/Goback";
+import ShareButton from "../../Components/ShareButton";
 const details = () => {
   const toast = useToast();
   const param = useLocalSearchParams();
@@ -33,7 +34,14 @@ const details = () => {
 
   return (
     <BackgroundImage>
-      <Goback />
+      <View className="flex-1 flex-row">
+        <Goback />
+        <ShareButton
+          Image={param.url}
+          Explanation={param.explanation}
+          Title={param.title}
+        />
+      </View>
       <View className="flex-12 pb-4">
         <View className="flex-2 my-2 px-3 ">
           {param.media_type === "video" ? (

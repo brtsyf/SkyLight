@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React, { useState } from "react";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
-import { router, usePathname } from "expo-router";
+import { router } from "expo-router";
 import { useToast } from "react-native-toast-notifications";
 import PressableButton from "../../Components/Button";
 import CountShower from "../../Components/CountShower";

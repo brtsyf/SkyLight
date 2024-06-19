@@ -8,11 +8,8 @@ import Header from "../../../Components/Header";
 import Card from "../../../Components/Card";
 import { dateDay, dateMonth, dateYear } from "../../../data";
 import BackgroundImage from "../../../Components/BackgroundImage";
-import { usePathname } from "expo-router";
 
 const FindAscendant = () => {
-  const path = usePathname();
-  console.log(path);
   const [day, setDay] = useState(null);
   const [many, setMany] = useState([]);
   const [month, setMonth] = useState(null);
