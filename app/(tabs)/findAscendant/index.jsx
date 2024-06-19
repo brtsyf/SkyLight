@@ -18,8 +18,8 @@ const FindAscendant = () => {
   const [ascendant, setAscendant] = useState(null);
   const [active, setActive] = useState(false);
   const toast = useToast();
+
   useEffect(() => {
-    console.log(many);
     if (month) {
       setMany([]);
       for (
@@ -128,7 +128,6 @@ const FindAscendant = () => {
   };
 
   const findAscendant = (horos, month, day) => {
-    console.log(horos, month, day);
     switch (horos) {
       case "Oğlak":
         if (
@@ -411,13 +410,15 @@ const FindAscendant = () => {
           />
         </View>
       </View>
-      <View className="flex-5 px-5 pb-4">
+      <View className="flex-6 px-5 pb-4">
         {horoscope && ascendant ? (
           active ? (
-            <View className="h-full px-2 py-5  w-full bg-[#393939af] rounded-3xl flex-row">
+            <View className="h-full px-2 py-5 w-full">
               <>
-                <Card cardTitle="Burç" cardValue={horoscope} />
-                <Card cardTitle="Yükselen" cardValue={ascendant} />
+                <View className="flex-row flex-12">
+                  <Card cardTitle="Burç" cardValue={horoscope} />
+                  <Card cardTitle="Yükselen" cardValue={ascendant} />
+                </View>
               </>
             </View>
           ) : (

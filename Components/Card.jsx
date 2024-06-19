@@ -2,11 +2,28 @@ import React, { useEffect, useRef, useState } from "react";
 import { View, Text } from "react-native";
 import AnimatedSVGPaths from "react-native-svg-animations/components/AnimatedSVGPaths";
 import { Images } from "../data";
+import { TouchableOpacity } from "react-native";
+import { router } from "expo-router";
+import Animated, {
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from "react-native-reanimated";
 
 const Card = ({ cardTitle, cardValue }) => {
   const ref = useRef();
   const [ds, setDs] = useState(null);
 
+  let animation = useSharedValue(0);
+  const anim = useAnimatedStyle(() => {
+    return {
+      opacity: withTiming(animation.value, { duration: 2200 }),
+      transform: [{ scale: withTiming(animation.value, { duration: 850 }) }],
+    };
+  });
+  useEffect(() => {
+    animation.value = 1;
+  }, [cardTitle, cardValue]);
   useEffect(() => {
     let index = Images.findIndex((item) => item.name === cardValue);
     if (index !== -1) {
@@ -31,10 +48,19 @@ const Card = ({ cardTitle, cardValue }) => {
           />
         )}
       </View>
-      <View style={styles.textContainer}>
+      <Animated.View style={[styles.textContainer, anim]}>
         <Text style={styles.titleText}>{cardTitle}</Text>
         <Text style={styles.valueText}>"{cardValue}"</Text>
-      </View>
+        {cardTitle == "Burç" && (
+          <TouchableOpacity
+            onPress={() => router.push(`/findAscendant/${cardValue}`)}
+          >
+            <Text className="text-white px-3 py-4 mt-1  rounded-xl bg-primary text-md font-bold ">
+              {"Özelliklerini Göster"}
+            </Text>
+          </TouchableOpacity>
+        )}
+      </Animated.View>
     </View>
   );
 };
