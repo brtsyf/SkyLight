@@ -7,7 +7,7 @@ const Layout = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="details" />
+      <Stack.Screen name="details/index" />
     </Stack>
   );
 };

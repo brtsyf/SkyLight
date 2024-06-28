@@ -1,12 +1,12 @@
 import { View, Text, ImageBackground, ScrollView } from "react-native";
 import React from "react";
 import { useLocalSearchParams } from "expo-router";
-import PressableButton from "../../Components/Button";
+import PressableButton from "../../../Components/Button";
 import { useToast } from "react-native-toast-notifications";
 import * as Clipboard from "expo-clipboard";
-import BackgroundImage from "../../Components/BackgroundImage";
-import Goback from "../../Components/Goback";
-import ShareButton from "../../Components/ShareButton";
+import BackgroundImage from "../../../Components/BackgroundImage";
+import Goback from "../../../Components/Goback";
+import ShareButton from "../../../Components/ShareButton";
 const details = () => {
   const toast = useToast();
   const param = useLocalSearchParams();
