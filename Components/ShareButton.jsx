@@ -1,15 +1,47 @@
-import { View, Text, TouchableOpacity, Share } from "react-native";
+import { View, TouchableOpacity, Share, Text } from "react-native";
 import { Octicons } from "@expo/vector-icons";
-const ShareButton = ({ Image, Explanation, Title }) => {
-  const ShareDocs = () => {
-    try {
-      Share.share({
-        message: Title + ":" + "\n" + Explanation + "\n" + Image,
-      }).catch((e) => {
-        console.log(e);
-      });
-    } catch (e) {
-      console.log(e);
+import * as FileSystem from "expo-file-system";
+import * as Sharing from "expo-sharing";
+import { useToast } from "react-native-toast-notifications";
+const ShareButton = ({ Image, Title }) => {
+  const toast = useToast();
+  const ShareDocs = async () => {
+    if (
+      Image.split(".")[Image.split(".").length - 1] === "jpg" ||
+      Image.split(".")[Image.split(".").length - 1] === "png" ||
+      Image.split(".")[Image.split(".").length - 1] === "gif"
+    ) {
+      try {
+        const result = await FileSystem.downloadAsync(
+          Image,
+          FileSystem.documentDirectory +
+            Title +
+            `.${Image.split(".")[Image.split(".").length - 1]}`
+        );
+        Sharing.shareAsync(result.uri);
+      } catch (e) {
+        toast.show("Resmi Paylaşırken bir hata oluştu", {
+          type: "danger",
+          placement: "bottom",
+          duration: 1500,
+          offset: 30,
+          animationType: "zoom-in",
+        });
+      }
+    } else {
+      try {
+        Share.share({
+          message: `${Image}`,
+        });
+      } catch (e) {
+        toast.show("Resmi Paylaşırken bir hata oluştu", {
+          type: "danger",
+          placement: "bottom",
+          duration: 1500,
+          offset: 30,
+          animationType: "zoom-in",
+        });
+      }
     }
   };
   return (

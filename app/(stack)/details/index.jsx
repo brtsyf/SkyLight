@@ -34,13 +34,9 @@ const details = () => {
 
   return (
     <BackgroundImage>
-      <View className="flex-1 flex-row">
+      <View className="flex-1 flex-row px-3">
         <Goback />
-        <ShareButton
-          Image={param.url}
-          Explanation={param.explanation}
-          Title={param.title}
-        />
+        <ShareButton Image={param.url} Title={param.title} />
       </View>
       <View className="flex-12 pb-4">
         <View className="flex-2 my-2 px-3 ">
