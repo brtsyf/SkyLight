@@ -1,0 +1,11 @@
+Sky Light
+
+Gökyüzüne bakışınızı derinleştirmek için tasarlanmış bir keşif aracı olan Sky Light, size NASA'nın 1995'ten günümüze kadar güncel uzaydan ve gökyüzünden çektiği o günün fotoğrafını tarih girerek ulaşmanızı sağlar. Herhangi bir tarihi seçtiğinizde, o günün gökyüzü olaylarını ve evrenin sunduğu güzellikleri gözler önüne seren eşsiz fotoğrafları keşfedebilir ve bu karelerin arkasındaki hikayeleri okuyabilirsiniz. Örneğin, 23 Haziran 2004 tarihini seçtiğinizde, Venüs'ün Güneş'in önünden geçtiği, yüz yılda yalnızca bir kez yaşanan bu olağanüstü gökyüzü olayını yeniden yaşayabilirsiniz. Her günün gökyüzü, keşfedilmeyi bekleyen bir hazine gibidir ve Sky Light ile bu hazineyi keşfetmek artık parmaklarınızın ucunda!
+
+Ayrıca, burcunuzu ve yükselen burcunuzu öğrenmek için doğum tarihinizi girdiğinizde, astroloji dünyasında kendinizi daha da derinlemesine keşfedeceksiniz. Burç özelliklerini de öğrenerek, hangi burcun hangi karakteristik özelliklere sahip olduğunu görebilir, kişisel ve duygusal yolculuğunuzda daha fazla bilgi sahibi olabilirsiniz. Örneğin, Koç burcunun cesur ve lider ruhlu olduğunu, Balık burcunun ise duygusal ve sezgisel olduğunu öğrenebilirsiniz. Burçlar hakkında bilgi sahibi olmak, hem kendinizi hem de çevrenizdekileri daha iyi anlamanızı sağlar.
+
+Sky Light ile sevdiklerinizin doğum günlerinde veya özel günlerinde onlara özel bir jest yapabilirsiniz. Onların doğdukları günün gökyüzünden çekilmiş fotoğraflarını bulup, bu özel anıları paylaşarak onları mutlu edebilirsiniz. Belki de o gün, dolunayın aydınlattığı bir gece ya da bir meteor yağmurunun gökyüzünü süslediği bir an vardı. Bu büyülü anları sevdiklerinizle paylaşarak, onlara hem nostaljik hem de anlam dolu bir hediye verebilirsiniz.
+
+Hayal edin, bir arkadaşınızın doğum gününde ona, doğduğu günün ilk ışıklarında çekilmiş bir yıldız fotoğrafını gösteriyorsunuz. Ya da annenize, sizi kucağına aldığı gün gökyüzünde parlayan yıldızları sunuyorsunuz. Sky Light ile geçmişin büyüsünü ve gökyüzünün güzelliklerini bugüne taşıyabilir, sevdiklerinizin hayatlarına dokunan anlamlı anılar yaratabilirsiniz. Gökyüzünün tarih boyunca sunduğu bu görkemli manzaraları keşfederken, her fotoğrafın ardında yatan bilimsel gerçeklikleri ve hikayeleri de öğrenerek, evrenin sonsuz güzelliğine bir adım daha yaklaşabilirsiniz
+
+https://play.google.com/store/apps/details?id=com.mydate
