@@ -1,4 +1,4 @@
-Sky Light
+--Sky Light--
 
 Gökyüzüne bakışınızı derinleştirmek için tasarlanmış bir keşif aracı olan Sky Light, size NASA'nın 1995'ten günümüze kadar güncel uzaydan ve gökyüzünden çektiği o günün fotoğrafını tarih girerek ulaşmanızı sağlar. Herhangi bir tarihi seçtiğinizde, o günün gökyüzü olaylarını ve evrenin sunduğu güzellikleri gözler önüne seren eşsiz fotoğrafları keşfedebilir ve bu karelerin arkasındaki hikayeleri okuyabilirsiniz. Örneğin, 23 Haziran 2004 tarihini seçtiğinizde, Venüs'ün Güneş'in önünden geçtiği, yüz yılda yalnızca bir kez yaşanan bu olağanüstü gökyüzü olayını yeniden yaşayabilirsiniz. Her günün gökyüzü, keşfedilmeyi bekleyen bir hazine gibidir ve Sky Light ile bu hazineyi keşfetmek artık parmaklarınızın ucunda!
 
