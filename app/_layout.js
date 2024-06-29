@@ -6,7 +6,7 @@ const Layout = () => {
     <ToastProvider
       successColor="#9990FF"
       dangerColor="red"
-      warningColor="orange"
+      warningColor="gray"
       normalColor="gray"
     >
       <StatusBar style="auto" />

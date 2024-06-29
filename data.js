@@ -381,6 +381,18 @@ const dateYear = [
 const properties = [
   {
     name: "Balık",
+    horoscopePersonality: {
+      planet: "Neptün",
+      element: "Su",
+      quality: "Değişken",
+      luckyDay: "Perşembe",
+      luckyColor: "Deniz mavisi, mor, deniz yeşili",
+      luckyNumber: "2, 3, 9, 11",
+      flower: "Menekşe, zambak, nilüfer",
+      stone: "Ametist, akik, kuvars",
+      metal: "Alüminyum",
+      animal: "Balina, yunus, deniz atı",
+    },
     positive:
       "Alçak gönüllü. Şefkatli. Sempatik. Hassas. Adapte olabilir. Etkili. Anlayışlı. Nazik. Sezgili. Renkli hayaller. Derin duygular. Sevgiye düşkünlük. Merhametli. Güzel sanatlarda başarılı. İyi niyetli. Yardımsever.",
     negative:
@@ -392,6 +404,18 @@ const properties = [
   },
   {
     name: "Kova",
+    horoscopePersonality: {
+      planet: "Satürn, Uranüs",
+      element: "Hava",
+      quality: "Sabit",
+      luckyDay: "Cumartesi",
+      luckyColor: "Gri, mavi",
+      luckyNumber: "4, 7",
+      flower: "Orkide, kuşkonmaz",
+      stone: "Ametist, obsidyen",
+      metal: "Kurşun",
+      animal: "Baykuş",
+    },
     positive:
       "Hümanist. Bağımsız. Dost. Mucit. Orijinalist. Reformist. Sadık. Vefalı. İdealist. Entelektüel. Yeniliğe meraklı. Değişikliği sever. Geçmişe bağlı.",
     negative:
@@ -403,6 +427,18 @@ const properties = [
   },
   {
     name: "Oğlak",
+    horoscopePersonality: {
+      planet: "Satürn",
+      element: "Toprak",
+      quality: "Öncü",
+      luckyDay: "Cumartesi",
+      luckyColor: "Kahverengi, gri",
+      luckyNumber: "4, 8",
+      flower: "Menekşe, kamelya",
+      stone: "Oniks, kehribar",
+      metal: "Kurşun",
+      animal: "Keçi",
+    },
     positive:
       "Çalışkan. Güvenilir. Kararlı. İstekli. Sabırlı. Azimli. İhtiyatlı. Disiplinli. Plancı. Espri gücü. Düzenli. Sebatkar. Azla yetinir. Zengin olur. Dayanma gücü yüksek. Sorumlu. İyi eş, iyi anne baba. Mülkiyetçi.",
     negative:
@@ -414,6 +450,18 @@ const properties = [
   },
   {
     name: "Koç",
+    horoscopePersonality: {
+      planet: "Mars",
+      element: "Ateş",
+      quality: "Öncü",
+      luckyDay: "Salı",
+      luckyColor: "Kırmızı",
+      luckyNumber: "1, 9",
+      flower: "Lale, sümbül",
+      stone: "Elmas, yakut",
+      metal: "Demir",
+      animal: "Koç, koyun",
+    },
     positive:
       "Öncülük ve macera ruhu. Girişkenlik. Adam yönlendirme. Hedef belirleme özelliği. Yüksek Enerji. Engelleri aşabilme yetişi. Sınırlamalardan nefret. Liderlik. Dürüstlük. Hazır cevaplık. Canlılık.",
     negative:
@@ -425,6 +473,18 @@ const properties = [
   },
   {
     name: "Boğa",
+    horoscopePersonality: {
+      planet: "Venüs",
+      element: "Toprak",
+      quality: "Sabit",
+      luckyDay: "Cuma",
+      luckyColor: "Pembe, yeşil",
+      luckyNumber: "2, 8",
+      flower: "Gül, zambak",
+      stone: "Zümrüt, safir",
+      metal: "Bakır",
+      animal: "Boğa",
+    },
     positive:
       "Pratik, güvenilir. Uyumlu, tahammüllü, güçlü değer yargıları var. Kararlı. Sanata ve güzelliğe düşkün. Güçlü istekleri var. Sıcak kanlı. Para sahibi olur. Duygulara önem verir.",
     negative:
@@ -436,6 +496,18 @@ const properties = [
   },
   {
     name: "İkizler",
+    horoscopePersonality: {
+      planet: "Merkür",
+      element: "Hava",
+      quality: "Değişken",
+      luckyDay: "Çarşamba",
+      luckyColor: "Sarı",
+      luckyNumber: "3, 5",
+      flower: "Lavanta, leylak",
+      stone: "Akuamarin, zümrüt",
+      metal: "Cıva",
+      animal: "Maymun",
+    },
     positive:
       "Uyumlu, entelektüel, çabuk kavrayan, mantıklı, konuşkan, canlı, sempatik, yeniliklere açık. Aynı anda bir kaç işi birden yapabilen.",
     negative:
@@ -447,6 +519,18 @@ const properties = [
   },
   {
     name: "Yengeç",
+    horoscopePersonality: {
+      planet: "Ay",
+      element: "Su",
+      quality: "Öncü",
+      luckyDay: "Pazartesi",
+      luckyColor: "Beyaz, gümüş",
+      luckyNumber: "2, 7",
+      flower: "Nilüfer, zambak",
+      stone: "Aytaşı, inci",
+      metal: "Gümüş",
+      animal: "Yengeç",
+    },
     positive:
       " Nazik,Hassas,Sempatik,Merhametli Düş gücü yüksek. Analık ve babalık duygulan güçlü. Vatansever. Yuva sevgisi. Israrlı. Becerikli. İyi eş. Tutumlu.",
     negative:
@@ -458,6 +542,18 @@ const properties = [
   },
   {
     name: "Aslan",
+    horoscopePersonality: {
+      planet: "Güneş",
+      element: "Ateş",
+      quality: "Sabit",
+      luckyDay: "Pazar",
+      luckyColor: "Altın, turuncu",
+      luckyNumber: "1, 4",
+      flower: "Gül, ayçiçeği",
+      stone: "Elmas, kehribar",
+      metal: "Altın",
+      animal: "Aslan",
+    },
     positive:
       "Yüce gönüllülük. Cömertlik. Yaratıcılık. Babalık. Fedakarlık. Üstünlük. Yaratıcılık. Neşe. İyi organizasyon. Açık zihin.",
     negative:
@@ -469,6 +565,18 @@ const properties = [
   },
   {
     name: "Başak",
+    horoscopePersonality: {
+      planet: "Merkür",
+      element: "Toprak",
+      quality: "Değişken",
+      luckyDay: "Çarşamba",
+      luckyColor: "Mavi, yeşil",
+      luckyNumber: "3, 5",
+      flower: "Kardelen, menekşe",
+      stone: "Safir, zümrüt",
+      metal: "Cıva",
+      animal: "Kedi",
+    },
     positive:
       "Analizcilik. Dostluk. Dikkat. Ustalık. Cana yakınlık. Temizlik. Titizlik. Alçak gönüllülük. Giyim merakı. Hesap kafası. Esprili konuşma. İyilik isteği.",
     negative:
@@ -480,6 +588,18 @@ const properties = [
   },
   {
     name: "Terazi",
+    horoscopePersonality: {
+      planet: "Venüs",
+      element: "Hava",
+      quality: "Öncü",
+      luckyDay: "Cuma",
+      luckyColor: "Pembe, mavi",
+      luckyNumber: "6, 9",
+      flower: "Papatya, gül",
+      stone: "Elmas, safir",
+      metal: "Bakır",
+      animal: "Kelebek",
+    },
     positive:
       "Güzellik, güzel sanatlara yetenekli. Sevimlilik. Uyumluluk. Zarafet. Romantik. Diplomatik. İncelik. Çekicilik. İdealist. Tarafsız. İyi niyetli. İyi ortak. İyi siyasetçi. Kreatif ve alımlı. Akıllı.",
     negative:
@@ -491,6 +611,18 @@ const properties = [
   },
   {
     name: "Akrep",
+    horoscopePersonality: {
+      planet: "Mars, Plüton",
+      element: "Su",
+      quality: "Sabit",
+      luckyDay: "Salı",
+      luckyColor: "Kırmızı, siyah",
+      luckyNumber: "8, 11",
+      flower: "Akasya, gardenya",
+      stone: "Opal, akik",
+      metal: "Demir",
+      animal: "Akrep",
+    },
     positive:
       " Sırdaş. Duygularım belli etmez. Gerçek dost. Cazibeli. Güçlü. Seks sembolü. Çalışkan. Kararlı. Unutmaz. Güçlü sezgiler. Güçlü duygular. Yüksek imajinasyon. Anlayışlı. Dikkatli. Yüksek analiz gücüne sahip. Sevgi. Pişmanlık.",
     negative:
@@ -502,6 +634,18 @@ const properties = [
   },
   {
     name: "Yay",
+    horoscopePersonality: {
+      planet: "Jüpiter",
+      element: "Ateş",
+      quality: "Değişken",
+      luckyDay: "Perşembe",
+      luckyColor: "Mor, mavi",
+      luckyNumber: "3, 9",
+      flower: "Karanfil, manolya",
+      stone: "Topaz, zirkon",
+      metal: "Kalay",
+      animal: "At",
+    },
     positive:
       "Keyifli. Neşeli, îş bilir. Açık zihinli. Adapte olur. İyi yargılar, Felsefik. Özgürlüğüne düşkün. Dışa dönük. Dindar. Eğitimli. Olgun. İyi niyetli. Sportmen. Yüksek hayal gücü. Şanslı. Neşeli.",
     negative:
