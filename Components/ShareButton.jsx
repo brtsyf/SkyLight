@@ -1,5 +1,6 @@
 import { View, TouchableOpacity, Share, Text } from "react-native";
 import { Octicons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import * as FileSystem from "expo-file-system";
 import * as Sharing from "expo-sharing";
 import { useToast } from "react-native-toast-notifications";
@@ -53,9 +54,9 @@ const ShareButton = ({ Image, Title }) => {
     }
   };
   return (
-    <View className="flex-1  justify-end items-center pr-4 flex-row">
-      <TouchableOpacity onPress={ShareDocs} className="flex-row">
-        <Octicons name="share" size={30} color="#9990FF" />
+    <View className="flex-1 items-end justify-end pb-4 flex-row ">
+      <TouchableOpacity onPress={ShareDocs} className="flex-row ">
+        <FontAwesome name="share" size={45} color="#9990FF" />
       </TouchableOpacity>
     </View>
   );

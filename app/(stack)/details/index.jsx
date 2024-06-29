@@ -36,7 +36,6 @@ const details = () => {
     <BackgroundImage>
       <View className="flex-1 flex-row px-3">
         <Goback />
-        <ShareButton Image={param.url} Title={param.title} />
       </View>
       <View className="flex-12 pb-4">
         <View className="flex-2 my-2 px-3 ">
@@ -68,10 +67,10 @@ const details = () => {
             </Text>
           </ScrollView>
 
-          <View className="my-2 justify-center items-center">
-            <PressableButton href={param.url} title="İndir" />
+          <View className="flex-1 justify-end items-center">
+            <ShareButton Image={param.url} Title={param.title} />
           </View>
-          <View className="my-2 justify-center items-center">
+          <View className="my-2 px-10 justify-center items-center">
             <PressableButton
               title="Metni Kopyala"
               onClick={() => {
