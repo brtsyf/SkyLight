@@ -55,7 +55,7 @@ const ShareButton = ({ Image, Title }) => {
   return (
     <View className="flex-1 items-end justify-end pb-4 flex-row ">
       <TouchableOpacity onPress={ShareDocs} className="flex-row ">
-        <FontAwesome name="share" size={45} color="#9990FF" />
+        <FontAwesome name="share" size={30} color="#9990FF" />
       </TouchableOpacity>
     </View>
   );
