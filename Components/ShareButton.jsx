@@ -18,7 +18,15 @@ const ShareButton = ({ Image, Title }) => {
             Title +
             `.${Image.split(".")[Image.split(".").length - 1]}`
         );
-        Sharing.shareAsync(result.uri);
+        Sharing.shareAsync(result.uri).catch((error) => {
+          toast.show("Resmi Paylaşırken bir hata oluştu", {
+            type: "danger",
+            placement: "bottom",
+            duration: 1500,
+            offset: 30,
+            animationType: "zoom-in",
+          });
+        });
       } catch (e) {
         toast.show("Resmi Paylaşırken bir hata oluştu", {
           type: "danger",
